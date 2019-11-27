@@ -1,0 +1,23 @@
+<table class="table table-old">
+    <thead class="bg-primary white-text">
+        <tr>
+            <th scope="col">Item Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Invnentory Code</th>
+            <th> </th>
+        </tr>
+    </thead>
+
+    <tbody class="bg-success text-dark">
+        <tr *ngFor="let currentItem of items">
+            <td>{{ currentItem.itemNumber}}</td>
+            <td>{{ currentItem.name}}</td>
+            <td>{{ currentItem.amount }}</td>
+            <td>{{ currentItem.inventoryCode }}</td>
+            <td><button type="button" (click)=[(deleteItem(currentItem))]>Delete Item</button><br>
+            <button type="button" (click)=[(updateAmount(currentItem))]>Update Amount</button></td>
+        </tr>
+    </tbody>
+</table>
+

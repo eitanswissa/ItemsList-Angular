@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Please Add Item</h1>
+    <form>
+        <div class="inner-wrap">
+            <label>Item Name <input type="text" name="itemName" [(ngModel)]="item.name"/></label>
+            <label>Amount <input type="number" name="amount" [(ngModel)]="item.amount"/></label>
+            <label>Inventory Code <input type="number" name="inventoryCode" [(ngModel)]="item.inventoryCode"></label>
+        </div>
+        <div class="button-section">
+         <input type="button" (click)="addItem()" name="add" value="submit"/>
+        </div>
+    </form>
+</div>

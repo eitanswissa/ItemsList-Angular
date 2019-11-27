@@ -1,0 +1,23 @@
+<table class="table table-old">
+    <thead class="bg-primary white-text">
+        <tr>
+            <th scope="col">Item Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Invnentory Code</th>
+            <th> </th>
+        </tr>
+    </thead>
+
+    <tbody class="bg-success text-dark">
+        <tr>
+            <td>{{ item.itemNumber}}</td>
+            <td>{{ item.name}}</td>
+            <td>{{ item.amount }}</td>
+            <td>{{ item.inventoryCode }}</td>
+            <td><button type="button" (click)=[(deleteItem())]>Delete Item</button><br>
+                <button type="button" (click)=[(updateAmount(item))]>Update Amount</button></td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>How much items would you like to remove from stock?</h1>
+    <form>
+        <div class="inner-wrap">
+            <label>Amount of items to remove <input type="number" [(ngModel)]="removeAmount" name="removeAmount" [value]='removeAmount' (keyup.enter)='withdraw($event)'></label>
+        </div>
+        <div class="button-section">
+         <button type="button" (click)="withdraw(removeAmount)" name="withdraw" value="withdraw">Withdraw</button>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+    <h1>How much items would you like to add to stock?</h1>
+    <form>
+        <div class="inner-wrap">
+            <label>Amount of items to add <input type="number" [(ngModel)]="addAmount" name="addAmount" [value]='addAmount' (keyup.enter)='deposit($event)'></label>
+        </div>
+        <div class="button-section">
+         <button type="button" (click)="deposit(addAmount)" name="deposit" value="deposit">Deposit</button>
+        </div>
+    </form>
+</div>

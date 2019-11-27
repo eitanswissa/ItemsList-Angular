@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Please Choose Item By Id</h1>
+    <form>
+        <div class="inner-wrap">
+            <label>Item Number <input type="text" [(ngModel)]="itemNumber" name="itemNumber" [value]='itemNumber' (keyup.enter)='getItemById($event)'></label>
+        </div>
+        <div class="button-section">
+         <button type="button" (click)="getItemById(itemNumber)" name="getItem" value="submit">Submit</button>
+        </div>
+    </form>
+</div>
